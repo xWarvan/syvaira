@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warvan | Web3 Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@heroicons/v2.0.18/24/outline/index.js"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #60a5fa, #38bdf8, #22d3ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .mobile-menu {
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 scroll-smooth overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800/90 backdrop-blur-md z-50 border-b border-gray-700">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold gradient-text">Syvaira</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-blue-400 transition-all duration-300">About</a>
+                    <a href="#expertise" class="hover:text-blue-400 transition-all duration-300">Expertise</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-all duration-300">Projects</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-all duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="flex flex-col space-y-4 pt-4 pb-2">
+                    <a href="#about" class="hover:text-blue-400 transition-all duration-300">About</a>
+                    <a href="#expertise" class="hover:text-blue-400 transition-all duration-300">Expertise</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-all duration-300">Projects</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-all duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20" id="about">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto transform transition-all duration-500 hover:scale-105">
+                <div class="floating">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        <span class="gradient-text">Web3 Architect</span> &<br>Blockchain Explorer
+                    </h1>
+                </div>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8 animate-fade-in-up">
+                    Building decentralized futures through innovative protocols, smart contracts, and community-driven ecosystems
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="py-20 bg-gray-800/50" id="expertise">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center gradient-text">Core Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- DeFi Expertise -->
+                <div class="bg-gray-800 p-8 rounded-2xl hover:border-blue-400 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 opacity-0 animate-slide-in-left">
+                    <div class="w-12 h-12 bg-blue-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">DeFi Strategies</h3>
+                    <p class="text-gray-400">Yield optimization, liquidity mining, and protocol analysis across multiple chains</p>
+                </div>
+
+                <!-- Node Operations -->
+                <div class="bg-gray-800 p-8 rounded-2xl hover:border-blue-400 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 opacity-0 animate-slide-in-right">
+                    <div class="w-12 h-12 bg-blue-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Node Operations</h3>
+                    <p class="text-gray-400">Full node setup, maintenance, and validation across various networks</p>
+                </div>
+
+                <!-- Smart Contracts -->
+                <div class="bg-gray-800 p-8 rounded-2xl hover:border-blue-400 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 opacity-0 animate-slide-in-left">
+                    <div class="w-12 h-12 bg-blue-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Smart Contracts</h3>
+                    <p class="text-gray-400">Secure contract development and auditing for EVM-compatible chains</p>
+                </div>
+
+                <!-- DAO Governance -->
+                <div class="bg-gray-800 p-8 rounded-2xl hover:border-blue-400 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 opacity-0 animate-slide-in-right">
+                    <div class="w-12 h-12 bg-blue-400/10 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">DAO Governance</h3>
+                    <p class="text-gray-400">Decentralized governance models and voting system implementations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20" id="projects">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center gradient-text">Featured Innovations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative bg-gray-800 p-6 rounded-2xl hover:border-blue-400 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 opacity-0 animate-scale-in">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="DeFi Protocol" 
+                         class="w-full h-64 object-cover rounded-lg mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-4">DeFi Yield Aggregator</h3>
+                    <p class="text-gray-400 mb-4">Automated yield optimization across multiple DeFi protocols</p>
+                    <div class="flex space-x-4">
+                        <span class="px-3 py-1 bg-blue-400/10 text-blue-400 rounded-full text-sm">Solidity</span>
+                        <span class="px-3 py-1 bg-blue-400/10 text-blue-400 rounded-full text-sm">React</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative bg-gray-800 p-6 rounded-2xl hover:border-blue-400 border-2 border-transparent transition-all duration-300 hover:-translate-y-2 opacity-0 animate-scale-in">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1640826514546-7d2eab70a4e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="NFT Platform" 
+                         class="w-full h-64 object-cover rounded-lg mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-4">NFT Marketplace</h3>
+                    <p class="text-gray-400 mb-4">Cross-chain NFT trading platform with dynamic royalties</p>
+                    <div class="flex space-x-4">
+                        <span class="px-3 py-1 bg-blue-400/10 text-blue-400 rounded-full text-sm">IPFS</span>
+                        <span class="px-3 py-1 bg-blue-400/10 text-blue-400 rounded-full text-sm">Next.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-800/50" id="contact">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl transform hover:scale-[1.01] transition-transform duration-300">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text">Let's Build Together</h2>
+                <form action="https://formspree.io/f/mldgoebv" method="POST" class="space-y-6">
+                    <div class="relative">
+                        <input type="text" name="name" required 
+                               class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all peer"
+                               placeholder=" ">
+                        <label class="absolute left-4 top-3 text-gray-400 transition-all pointer-events-none 
+                                  peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+                                  peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-400
+                                  -top-3 text-sm bg-gray-900 px-2">Name</label>
+                    </div>
+                    <div class="relative">
+                        <input type="email" name="email" required 
+                               class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all peer"
+                               placeholder=" ">
+                        <label class="absolute left-4 top-3 text-gray-400 transition-all pointer-events-none 
+                                  peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+                                  peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-400
+                                  -top-3 text-sm bg-gray-900 px-2">Email</label>
+                    </div>
+                    <div class="relative">
+                        <textarea name="message" rows="4" required 
+                               class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all peer"
+                               placeholder=" "></textarea>
+                        <label class="absolute left-4 top-3 text-gray-400 transition-all pointer-events-none 
+                                  peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+                                  peer-focus:-top-3 peer-focus:text-sm peer-focus:text-blue-400
+                                  -top-3 text-sm bg-gray-900 px-2">Message</label>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:scale-[1.02] transition-transform duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                    © 2023 Warvan. Architecting Web3 Future
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://twitter.com/0xWarvan" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <!-- Twitter Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/xMevan" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <!-- GitHub Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <!-- LinkedIn Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animations -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if(!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+
+        // Close mobile menu after clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0');
+                    
+                    if(entry.target.classList.contains('animate-slide-in-left')) {
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                    if(entry.target.classList.contains('animate-slide-in-right')) {
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                    if(entry.target.classList.contains('animate-scale-in')) {
+                        entry.target.style.transform = 'scale(1)';
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-slide-in-left').forEach(el => {
+            el.style.transform = 'translateX(-50px)';
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.animate-slide-in-right').forEach(el => {
+            el.style.transform = 'translateX(50px)';
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.animate-scale-in').forEach(el => {
+            el.style.transform = 'scale(0.95)';
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Form submission handler
+        const form = document.querySelector('form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if(response.ok) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                } else {
+                    alert('Error sending message');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error sending message');
+            }
+        });
+    </script>
+</body>
+</html>
